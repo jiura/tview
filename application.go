@@ -189,6 +189,11 @@ func (a *Application) GetMouseCapture() func(event *tcell.EventMouse, action Mou
 	return a.mouseCapture
 }
 
+// GetScreen simply returns the application's current screen.
+func (a *Application) GetScreen() tcell.Screen {
+	return a.screen
+}
+
 // SetScreen allows you to provide your own tcell.Screen object. For most
 // applications, this is not needed and you should be familiar with
 // tcell.Screen when using this function. As the tcell.Screen interface may
